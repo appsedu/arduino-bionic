@@ -1,0 +1,13 @@
+Package: arduino-bionic
+Version: 1.8.9
+Installed-Size: 
+Maintainer: Crash and Eddie <crash.eddie123@gmail.com>
+Section: science
+Architecture: amd64
+Priority: optional
+Homepage: https://www.arduino.cc
+Description: IDE e bibliotecas embutidas para placa de desenvolvimento AVR.
+ Arduino é uma plataforma de código fonte aberto de prototipagem eletrônica
+ baseada em software e hardware flexíveis e fáceis de usar. Ela é voltada
+ para artistas, designers, pessoas dedicadas a um hobby e qualquer um
+ interessado em criar ambientes ou objetos interativos.

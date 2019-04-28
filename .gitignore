@@ -1,0 +1,3 @@
+*.deb
+*.tar.xz
+deb_package/opt/arduino/
