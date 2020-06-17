@@ -1,6 +1,6 @@
 Package: arduino-bionic
-Version: 1.8.12
-Installed-Size: 381308
+Version: 1.8.13
+Installed-Size: 369164
 Maintainer: Crash and Eddie <crash.eddie123@gmail.com>
 Section: science
 Architecture: amd64

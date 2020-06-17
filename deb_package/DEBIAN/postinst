@@ -30,9 +30,10 @@ while read USUARIO; do
 	runuser -l $USUARIO -c \
 	"cp -rf /tmp/arduino/preferences.txt /home/$USUARIO/.arduino15/"
 
-	geraShort /tmp/arduino/arduino-bionic.desktop \
-	/home/$USUARIO/.local/share/applications/arduino-bionic.desktop \
-	> /home/$USUARIO/Desktop/arduino-bionic.desktop
+	# geraShort /tmp/arduino/arduino-bionic.desktop \
+	# /home/$USUARIO/.local/share/applications/arduino-bionic.desktop \
+	# > /home/$USUARIO/Desktop/arduino-bionic.desktop
+	cp /home/$USUARIO/.local/share/applications/arduino-bionic.desktop /home/$USUARIO/Desktop/arduino-bionic.desktop
 
 	runuser -l $USUARIO -c "rm -rf /home/$USUARIO/.cache/"
 	if [ -f /usr/bin/lxpanelctl ]; then
