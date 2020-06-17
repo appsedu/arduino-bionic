@@ -1,9 +1,7 @@
-# Arduino IDE for Bionic Beaver
+# Arduino IDE for distros based in Debian
 
 > This is a fork from Project Arduino for linux x64. It is available in:
 > [https://www.arduino.cc](https://www.arduino.cc)
-
-This fork provides a release for debian package to Ubuntu 18.04 LTS.
 
 Arduino é uma plataforma de código fonte aberto de prototipagem eletrônica
  baseada em software e hardware flexíveis e fáceis de usar. Ela é voltada
