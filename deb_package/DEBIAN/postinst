@@ -3,37 +3,12 @@
 cat /etc/passwd | grep '/home/' | \
 grep -v 'cups\|syslog' | cut -d ':' -f 1 > /tmp/homes.list
 
-function geraShort {
-	echo "[Desktop Entry]"
-	echo "Type=Link"
-	cat $1 | \
-	grep "Name=" | head -n1
-	cat $1 | \
-	grep "Name[pt_BR]=" | head -n1
-	cat $1 | \
-	grep "Icon=" | head -n1
-	echo "URL=$2"
-}
-
 while read USUARIO; do
- 	runuser -l $USUARIO -c "mkdir -p /home/$USUARIO/.config/menus/applications-merged/"
- 	runuser -l $USUARIO -c "mkdir -p /home/$USUARIO/.local/share/desktop-directories/"
  	runuser -l $USUARIO -c "mkdir -p /home/$USUARIO/.arduino15/"
- 	runuser -l $USUARIO -c \
-	"cp -rf /tmp/arduino/education-Physics.directory /home/$USUARIO/.local/share/desktop-directories/"
-	runuser -l $USUARIO -c \
-	"cp -rf /tmp/arduino/education-Electronics.directory /home/$USUARIO/.local/share/desktop-directories/"
-	runuser -l $USUARIO -c \
-	"cp /tmp/arduino/arduino-bionic.menu /home/$USUARIO/.config/menus/applications-merged/"
-	runuser -l $USUARIO -c \
-	"cp -rf /tmp/arduino/arduino-bionic.desktop /home/$USUARIO/.local/share/applications/"
 	runuser -l $USUARIO -c \
 	"cp -rf /tmp/arduino/preferences.txt /home/$USUARIO/.arduino15/"
 
-	# geraShort /tmp/arduino/arduino-bionic.desktop \
-	# /home/$USUARIO/.local/share/applications/arduino-bionic.desktop \
-	# > /home/$USUARIO/Desktop/arduino-bionic.desktop
-	cp /home/$USUARIO/.local/share/applications/arduino-bionic.desktop /home/$USUARIO/Desktop/arduino-bionic.desktop
+	cp /usr/share/applications/arduino-bionic.desktop /home/$USUARIO/Desktop/arduino-bionic.desktop
 
 	runuser -l $USUARIO -c "rm -rf /home/$USUARIO/.cache/"
 	if [ -f /usr/bin/lxpanelctl ]; then

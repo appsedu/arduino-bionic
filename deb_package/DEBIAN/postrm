@@ -4,8 +4,6 @@ cat /etc/passwd | grep '/home/' | \
 grep -v 'cups\|syslog' | cut -d ':' -f 6 > /tmp/homes.list
 
 while read BASEDIR; do
-    rm -rf "$BASEDIR/.local/share/applications/arduino-bionic.desktop"
-    rm -rf "$BASEDIR/.config/menus/applications-merged/arduino-bionic.menu"
     rm -rf "$BASEDIR/Desktop/arduino-bionic.desktop"
     rm -rf "$BASEDIR/.arduino15/"
 done < /tmp/homes.list

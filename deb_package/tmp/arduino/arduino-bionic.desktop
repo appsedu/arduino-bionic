@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Arduino IDE
-Comment=Ambiente de desevolvimento do Arduino
-Icon=arduino
-Exec=/opt/arduino/arduino
-Terminal=false
-Type=Application
